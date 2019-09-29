@@ -3,11 +3,12 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Carregamento extends JFrame implements ActionListener{
+public class Carregamento extends JFrame{
 
     public JLabel apoioBarra, texto;
     public JProgressBar barra;
-    public JButton botaoJogar;
+    public int valor = 0;
+    //public JButton botaoJogar;
 
     public Carregamento(){
 
@@ -20,13 +21,13 @@ public class Carregamento extends JFrame implements ActionListener{
         getContentPane().setBackground(new Color(178, 178,255));
 
         apoioBarra = new JLabel("apoioBarra");
-        apoioBarra.setBounds(160,150,200,50);
+        apoioBarra.setBounds(160,100,200,50);
 
-        texto = new JLabel("texto");
+        texto = new JLabel("");
         texto.setBounds(120,250,200,50);
 
-        botaoJogar = new JButton("Jogar");
-        botaoJogar.setBounds(150,350,200,50);
+        //botaoJogar = new JButton("Jogar");
+        //botaoJogar.setBounds(150,350,200,50);
 
         barra = new JProgressBar(0,100);
         barra.setBounds(150,150,0,50);
@@ -35,7 +36,7 @@ public class Carregamento extends JFrame implements ActionListener{
         getContentPane().add(apoioBarra);
         getContentPane().add(barra);
         getContentPane().add(texto);
-        getContentPane().add(botaoJogar);
+        //getContentPane().add(botaoJogar);
 
         new Thread(new carregar()).start();
     }
@@ -60,6 +61,8 @@ public class Carregamento extends JFrame implements ActionListener{
                     }
                     else{
                         texto.setText("Clique e jogue bro :p");
+                        valor = 1;
+                        //JOptionPane.showMessageDialog(null, "valor = "+valor);
                     }
                 }
                 catch (Exception erro){
@@ -70,11 +73,9 @@ public class Carregamento extends JFrame implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == botaoJogar){
-            Questoes janelaQuestoes = new Questoes();
-            this.dispose();
-            janelaQuestoes.setVisible(true);
-        }
+    public void dispose() {
+        Menu menu = new Menu();
+        super.dispose();
+        menu.setVisible(true);
     }
 }
