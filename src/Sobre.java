@@ -57,7 +57,6 @@ public class Sobre extends JFrame implements ActionListener {
 
         voltar.addActionListener(this);
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == voltar){

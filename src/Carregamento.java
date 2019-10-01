@@ -7,7 +7,7 @@ public class Carregamento extends JFrame{
 
     public JLabel apoioBarra, texto;
     public JProgressBar barra;
-    public int valor = 0;
+    //public int valor = 0;
     //public JButton botaoJogar;
 
     public Carregamento(){
@@ -60,8 +60,8 @@ public class Carregamento extends JFrame{
                         texto.setText("Preparando Ambiente..");
                     }
                     else{
-                        texto.setText("Clique e jogue bro :p");
-                        valor = 1;
+                        texto.setText("Pronto!!");
+                        //valor = 1;
                         //JOptionPane.showMessageDialog(null, "valor = "+valor);
                     }
                 }
@@ -69,13 +69,14 @@ public class Carregamento extends JFrame{
                     JOptionPane.showMessageDialog(null, erro);
                 }
             }
+            Pontuacao point = new Pontuacao();
+            //Menu menu = new Menu();
+            Carregamento.this.dispose();
+            //menu.setVisible(true);
+            point.setVisible(true);
         }
     }
 
-    @Override
-    public void dispose() {
-        Menu menu = new Menu();
-        super.dispose();
-        menu.setVisible(true);
-    }
+
+
 }

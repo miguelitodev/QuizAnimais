@@ -5,8 +5,9 @@ import java.awt.event.ActionListener;
 
 public class Menu extends JFrame implements ActionListener {
 
-    JLabel texto;
-    JButton botaoJogar, botaoSobre;
+    public JLabel texto;
+    public JButton botaoJogar, botaoSobre;
+    public static String nome;
 
     public Menu(){
 
@@ -45,6 +46,7 @@ public class Menu extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == botaoJogar){
+            nome = JOptionPane.showInputDialog(null, "Digite seu nome: ");
             Carregamento loading = new Carregamento();
             this.dispose();
             loading.setVisible(true);
