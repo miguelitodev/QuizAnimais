@@ -11,14 +11,14 @@ public class Pontuacao extends JFrame implements ActionListener {
 
     public Pontuacao(){
 
-        setTitle("PontuaÃ§Ã£o");
+        setTitle("Pontuação");
         setSize(400,400);
         setResizable(false);
         getContentPane().setBackground(new Color(178, 178,255));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        titulo = new JLabel("PontuaÃ§Ã£o");
+        titulo = new JLabel("Pontuação");
         titulo.setBounds(150, 50, 200, 50);
         titulo.setFont(new Font("Arial", Font.BOLD, 20));
 

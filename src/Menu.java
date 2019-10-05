@@ -38,7 +38,7 @@ public class Menu extends JFrame implements ActionListener {
         getContentPane().add(botaoJogar);
         getContentPane().add(botaoSobre);
 
-        //Dando aÃ§Ãµes para os botÃµes
+        //Dando ações para os botões
         botaoJogar.addActionListener(this);
         botaoSobre.addActionListener(this);
     }

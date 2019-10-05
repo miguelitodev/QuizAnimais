@@ -17,7 +17,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
     public Questoes(){
 
         //Criando a tela
-        setTitle("Quest√µes");
+        setTitle("Questıes");
         setSize(400,400);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -47,7 +47,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
         alternativa03.setBackground(new Color(178,178,255));
         alternativa03.setMnemonic(KeyEvent.VK_3);
 
-        alternativa04 = new JRadioButton("Tubar√£o");
+        alternativa04 = new JRadioButton("Tubar„o");
         alternativa04.setBounds(100, 280, 200, 20);
         alternativa04.setBackground(new Color(178,178,255));
         alternativa04.setMnemonic(KeyEvent.VK_4);
@@ -158,8 +158,8 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
             imagem.setIcon(new ImageIcon("img/Leao.jpg"));
             alternativa01.setText("Gato");
             alternativa02.setText("Cavalo");
-            alternativa03.setText("Le√£o");
-            alternativa04.setText("On√ßa");
+            alternativa03.setText("Le„o");
+            alternativa04.setText("OnÁa");
             alternativa05.setText("Lemure");
         }
         else if (i == 5){

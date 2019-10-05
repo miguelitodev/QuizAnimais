@@ -1,11 +1,12 @@
 import javax.swing.*;
+import javax.swing.ImageIcon;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Carregamento extends JFrame{
 
-    public JLabel apoioBarra, texto;
+    public JLabel apoioBarra, texto,gif;
     public JProgressBar barra;
     //public int valor = 0;
     //public JButton botaoJogar;
@@ -20,13 +21,19 @@ public class Carregamento extends JFrame{
         this.setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(178, 178,255));
 
-        apoioBarra = new JLabel("");
-        apoioBarra.setBounds(80,0,256,256);
-        apoioBarra.setIcon(new ImageIcon("img/loading.gif"));
+        apoioBarra = new JLabel("apoioBarra");
+        apoioBarra.setBounds(70,20,250,250);
+        ImageIcon icon = new ImageIcon(getClass().getResource("img/carregando.gif"));
+        apoioBarra.setIcon(icon);
 
         texto = new JLabel("");
-        texto.setBounds(110,250,250,50);
+        texto.setBounds(120,250,200,50);
+        
 
+
+       
+
+        
 
         //botaoJogar = new JButton("Jogar");
         //botaoJogar.setBounds(150,350,200,50);
@@ -54,12 +61,15 @@ public class Carregamento extends JFrame{
 
                     if (barra.getValue() <= 50){
                         texto.setText("Carregando Perguntas..");
+
                     }
                     else if (barra.getValue() <= 70){
                         texto.setText("Carregando Banco de dados..");
+
                     }
                     else if (barra.getValue() <= 90){
                         texto.setText("Preparando Ambiente..");
+
                     }
                     else{
                         texto.setText("Pronto!!");

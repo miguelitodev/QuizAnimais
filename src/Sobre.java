@@ -35,10 +35,10 @@ public class Sobre extends JFrame implements ActionListener {
         integranteTabata = new JLabel("Tabata Fernanda");
         integranteTabata.setBounds(150,140,400,50);
 
-        sala = new JLabel("2Â° Desenvolvimento de Sistemas");
+        sala = new JLabel("2° Desenvolvimento de Sistemas");
         sala.setBounds(100,200,400,50);
 
-        ano = new JLabel("2Â° Semestre - 2019");
+        ano = new JLabel("2° Semestre - 2019");
         ano.setBounds(140,225,400,50);
 
         voltar = new JButton("Voltar");
