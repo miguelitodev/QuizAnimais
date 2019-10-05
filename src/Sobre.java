@@ -13,10 +13,10 @@ public class Sobre extends JFrame implements ActionListener {
 
         //Montando a tela
         setTitle("Sobre");
-        setResizable(false);
+        setSize(400,400);
         this.setLocationRelativeTo(null);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        setSize(400,400);
+        setResizable(false);
         getContentPane().setBackground(new Color(178, 178,255));
 
         //Montando os componentes e posicionando

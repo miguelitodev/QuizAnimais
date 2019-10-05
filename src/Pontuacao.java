@@ -5,8 +5,10 @@ import java.awt.event.ActionListener;
 
 public class Pontuacao extends JFrame implements ActionListener {
     JLabel titulo, acertos, erros, nome;
-    JButton botaoVoltar, botaoRanking;
+    JButton botaoVoltar, botaoSair;
     Menu menu = new Menu();
+    Questoes quest = new Questoes();
+
     public Pontuacao(){
 
         setTitle("Pontuação");
@@ -24,21 +26,21 @@ public class Pontuacao extends JFrame implements ActionListener {
         nome.setBounds(50, 110, 200, 50);
         nome.setFont(new Font("Arial", Font.BOLD, 13));
 
-        acertos = new JLabel("Total de acertos: ");
+        acertos = new JLabel("Total de acertos: " + quest.acertos);
         acertos.setBounds(50, 150, 200, 50);
         acertos.setFont(new Font("Arial", Font.BOLD, 13));
 
-        erros = new JLabel("Total de erros: ");
+        erros = new JLabel("Total de erros: " + (10 - quest.acertos));
         erros.setBounds(50, 190, 200, 50);
         erros.setFont(new Font("Arial", Font.BOLD, 13));
 
-        botaoRanking = new JButton("Ranking");
-        botaoRanking.setBounds(50,280,100,40);
-        botaoRanking.setBackground(new Color(75, 235, 29));
-
         botaoVoltar = new JButton("Voltar");
-        botaoVoltar.setBounds(250,280,100,40);
-        botaoVoltar.setBackground(new Color(0xEFB62A));
+        botaoVoltar.setBounds(50,280,100,40);
+        botaoVoltar.setBackground(new Color(75, 235, 29));
+
+        botaoSair = new JButton("Sair");
+        botaoSair.setBounds(250,280,100,40);
+        botaoSair.setBackground(new Color(0xEFB62A));
 
         getContentPane().setLayout(null);
         getContentPane().add(titulo);
@@ -46,10 +48,10 @@ public class Pontuacao extends JFrame implements ActionListener {
         getContentPane().add(acertos);
         getContentPane().add(erros);
         getContentPane().add(botaoVoltar);
-        getContentPane().add(botaoRanking);
+        getContentPane().add(botaoSair);
 
         botaoVoltar.addActionListener(this);
-        botaoRanking.addActionListener(this);
+        botaoSair.addActionListener(this);
 
     }
 
@@ -57,8 +59,12 @@ public class Pontuacao extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == botaoVoltar){
             Menu menu = new Menu();
-            this.dispose();
+            Pontuacao.this.dispose();
             menu.setVisible(true);
+
+        }
+        else if(e.getSource() == botaoSair){
+            System.exit(0);
         }
     }
 }

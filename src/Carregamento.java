@@ -69,11 +69,11 @@ public class Carregamento extends JFrame{
                     JOptionPane.showMessageDialog(null, erro);
                 }
             }
-            Pontuacao point = new Pontuacao();
+            Questoes quest = new Questoes();
             //Menu menu = new Menu();
             Carregamento.this.dispose();
             //menu.setVisible(true);
-            point.setVisible(true);
+            quest.setVisible(true);
         }
     }
 
