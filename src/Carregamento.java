@@ -20,11 +20,13 @@ public class Carregamento extends JFrame{
         this.setLocationRelativeTo(null);
         getContentPane().setBackground(new Color(178, 178,255));
 
-        apoioBarra = new JLabel("apoioBarra");
-        apoioBarra.setBounds(160,100,200,50);
+        apoioBarra = new JLabel("");
+        apoioBarra.setBounds(80,0,256,256);
+        apoioBarra.setIcon(new ImageIcon("img/loading.gif"));
 
         texto = new JLabel("");
-        texto.setBounds(120,250,200,50);
+        texto.setBounds(110,250,250,50);
+
 
         //botaoJogar = new JButton("Jogar");
         //botaoJogar.setBounds(150,350,200,50);
