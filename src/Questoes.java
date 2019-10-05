@@ -1,10 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 
-public class Questoes extends JFrame implements ItemListener {
+public class Questoes extends JFrame implements ItemListener, ActionListener {
 
     ImageIcon img = new ImageIcon("../img/Zebra.jgp");
 
@@ -13,7 +11,6 @@ public class Questoes extends JFrame implements ItemListener {
     public JLabel pergunta, imagem;
     public ButtonGroup radioGroup;
     public JButton botaoPronto;
-
     public Questoes(){
 
         //Criando a tela
@@ -73,7 +70,8 @@ public class Questoes extends JFrame implements ItemListener {
         alternativa03.addItemListener(this);
         alternativa04.addItemListener(this);
         alternativa05.addItemListener(this);
-        botaoPronto.addItemListener(this);
+
+        botaoPronto.addActionListener(this);
 
         // COlocando na tela os objetos/componentes
         getContentPane().setLayout(null);
@@ -89,5 +87,13 @@ public class Questoes extends JFrame implements ItemListener {
     @Override
     public void itemStateChanged(ItemEvent e) {
 
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == botaoPronto){
+            imagem.setIcon(new ImageIcon());
+            radioGroup.clearSelection();
+        }
     }
 }
