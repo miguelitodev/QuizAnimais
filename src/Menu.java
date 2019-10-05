@@ -47,8 +47,8 @@ public class Menu extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == botaoJogar){
             nome = JOptionPane.showInputDialog(null, "Digite seu nome: ");
-            if(nome == null){
-                nome = "player";
+            if(nome == null || nome.length() <= 0){
+                nome = "Player";
             }
             Carregamento loading = new Carregamento();
             this.dispose();
