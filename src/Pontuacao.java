@@ -1,24 +1,30 @@
+// Importando
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Abrindo a Classe
 public class Pontuacao extends JFrame implements ActionListener {
+    //Instanciando os objetos
     JLabel titulo, acertos, erros, nome;
     JButton botaoVoltar, botaoSair;
     Menu menu = new Menu();
     Questoes quest = new Questoes();
 
+    // Chamando a classe
     public Pontuacao(){
 
-        setTitle("Pontuação");
+        // Criando a Tela
+        setTitle("Pontuaï¿½ï¿½o");
         setSize(400,400);
         setResizable(false);
         getContentPane().setBackground(new Color(178, 178,255));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
-        titulo = new JLabel("Pontuação");
+        //Criando os componentes
+        titulo = new JLabel("Pontuaï¿½ï¿½o");
         titulo.setBounds(150, 50, 200, 50);
         titulo.setFont(new Font("Arial", Font.BOLD, 20));
 
@@ -42,6 +48,7 @@ public class Pontuacao extends JFrame implements ActionListener {
         botaoSair.setBounds(250,280,100,40);
         botaoSair.setBackground(new Color(0xEFB62A));
 
+        // Adicionando os componentes a tela
         getContentPane().setLayout(null);
         getContentPane().add(titulo);
         getContentPane().add(nome);
@@ -50,6 +57,7 @@ public class Pontuacao extends JFrame implements ActionListener {
         getContentPane().add(botaoVoltar);
         getContentPane().add(botaoSair);
 
+        // Dando acao para os botoes
         botaoVoltar.addActionListener(this);
         botaoSair.addActionListener(this);
 
@@ -57,6 +65,7 @@ public class Pontuacao extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Determinando as acoes dos botoes
         if(e.getSource() == botaoVoltar){
             Menu menu = new Menu();
             Pontuacao.this.dispose();

@@ -1,5 +1,6 @@
 public class Executavel {
     public static void main(String[] args) {
-    	new Menu().setVisible(true);
+    	// Chamou a tela menu, para iniciar o jogo
+        new Menu().setVisible(true);
     }
 }

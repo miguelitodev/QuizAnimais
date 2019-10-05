@@ -1,10 +1,10 @@
+// Importando
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
+// Abrindo a classe
 public class Questoes extends JFrame implements ItemListener, ActionListener {
-
-    ImageIcon img = new ImageIcon("../img/Zebra.jgp");
 
     //Instanciando os objetos
     public JRadioButton alternativa01, alternativa02, alternativa03, alternativa04, alternativa05;
@@ -14,10 +14,11 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
     int i = 0;
     public static int acertos = 0;
 
+    // Chamou a classe
     public Questoes(){
 
         //Criando a tela
-        setTitle("Questões");
+        setTitle("Questï¿½es");
         setSize(400,400);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
@@ -47,7 +48,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
         alternativa03.setBackground(new Color(178,178,255));
         alternativa03.setMnemonic(KeyEvent.VK_3);
 
-        alternativa04 = new JRadioButton("Tubarão");
+        alternativa04 = new JRadioButton("Tubarï¿½o");
         alternativa04.setBounds(100, 280, 200, 20);
         alternativa04.setBackground(new Color(178,178,255));
         alternativa04.setMnemonic(KeyEvent.VK_4);
@@ -61,6 +62,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
         botaoPronto.setBounds(120,330,150,30);
         botaoPronto.setBackground(new Color(75, 235, 29));
 
+        // Adicionando os botoes ao radioGroup
         radioGroup = new ButtonGroup();
         radioGroup.add(alternativa01);
         radioGroup.add(alternativa02);
@@ -68,12 +70,12 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
         radioGroup.add(alternativa04);
         radioGroup.add(alternativa05);
 
+        // Dando acao para os botoes
         alternativa01.addItemListener(this);
         alternativa02.addItemListener(this);
         alternativa03.addItemListener(this);
         alternativa04.addItemListener(this);
         alternativa05.addItemListener(this);
-
         botaoPronto.addActionListener(this);
 
         // COlocando na tela os objetos/componentes
@@ -90,6 +92,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
     }
     @Override
     public void itemStateChanged(ItemEvent e) {
+        // Determinando as acoes dos botoes
         if(i == 0 && alternativa03.isSelected()){
             acertos++;
         }
@@ -127,6 +130,7 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+        // Determinando as acoes dos botoes
         i++;
         radioGroup.clearSelection();
 
@@ -158,8 +162,8 @@ public class Questoes extends JFrame implements ItemListener, ActionListener {
             imagem.setIcon(new ImageIcon("img/Leao.jpg"));
             alternativa01.setText("Gato");
             alternativa02.setText("Cavalo");
-            alternativa03.setText("Leão");
-            alternativa04.setText("Onça");
+            alternativa03.setText("Leï¿½o");
+            alternativa04.setText("Onï¿½a");
             alternativa05.setText("Lemure");
         }
         else if (i == 5){

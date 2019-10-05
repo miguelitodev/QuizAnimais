@@ -1,14 +1,17 @@
+// Importando
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Abrindo a classe
 public class Sobre extends JFrame implements ActionListener {
 
     //Criando os objetos
     public  JLabel titulo, integranteMarcos, integranteMiguel, integranteSidney, integranteTabata, sala, ano;
     public  JButton voltar;
 
+    // Montando a classe
     public Sobre(){
 
         //Montando a tela
@@ -35,16 +38,17 @@ public class Sobre extends JFrame implements ActionListener {
         integranteTabata = new JLabel("Tabata Fernanda");
         integranteTabata.setBounds(150,140,400,50);
 
-        sala = new JLabel("2° Desenvolvimento de Sistemas");
+        sala = new JLabel("2Â° Desenvolvimento de Sistemas");
         sala.setBounds(100,200,400,50);
 
-        ano = new JLabel("2° Semestre - 2019");
+        ano = new JLabel("2Â° Semestre - 2019");
         ano.setBounds(140,225,400,50);
 
         voltar = new JButton("Voltar");
         voltar.setBounds(100,300,200,50);
         voltar.setBackground(new Color(0xEFB62A));
-        //getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER)); -> aqui eu ia deixar tudo centralizado, deu merda
+
+        // Colocando os componentes na tela
         getContentPane().setLayout(null);
         getContentPane().add(titulo);
         getContentPane().add(integranteMiguel);
@@ -55,10 +59,12 @@ public class Sobre extends JFrame implements ActionListener {
         getContentPane().add(ano);
         getContentPane().add(voltar);
 
+        // Dando acao para o botao
         voltar.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent e) {
+        // Determinando a acao para o botao
         if (e.getSource() == voltar){
             Menu janelaMenu = new Menu();
             this.dispose();

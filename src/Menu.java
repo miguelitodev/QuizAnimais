@@ -1,14 +1,18 @@
+// As importaÃ§Ãµes
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// Classe Menu
 public class Menu extends JFrame implements ActionListener {
 
+    //Criando os objetos
     public JLabel texto;
     public JButton botaoJogar, botaoSobre;
     public static String nome;
 
+    //Chamou a classe Menu
     public Menu(){
 
         // Montando Interface
@@ -38,13 +42,14 @@ public class Menu extends JFrame implements ActionListener {
         getContentPane().add(botaoJogar);
         getContentPane().add(botaoSobre);
 
-        //Dando ações para os botões
+        //Dando acoes para os botoes
         botaoJogar.addActionListener(this);
         botaoSobre.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        // A acao do botao
         if (e.getSource() == botaoJogar){
             nome = JOptionPane.showInputDialog(null, "Digite seu nome: ");
             if(nome == null || nome.length() <= 0){
