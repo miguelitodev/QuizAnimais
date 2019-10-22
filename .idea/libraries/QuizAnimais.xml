@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="QuizAnimais">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/QuizAnimais_jar/QuizAnimais.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

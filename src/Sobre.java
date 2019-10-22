@@ -8,8 +8,8 @@ import java.awt.event.ActionListener;
 public class Sobre extends JFrame implements ActionListener {
 
     //Criando os objetos
-    public  JLabel titulo, integranteMarcos, integranteMiguel, integranteSidney, integranteTabata, sala, ano;
-    public  JButton voltar;
+    public  JLabel titulo, integranteMarcos, integranteMiguel, integranteNicolas, integranteTabata, sala, ano;
+    public  JButton voltar, devs;
 
     // Montando a classe
     public Sobre(){
@@ -32,8 +32,8 @@ public class Sobre extends JFrame implements ActionListener {
         integranteMiguel = new JLabel("Miguel Riquelme");
         integranteMiguel.setBounds(150,100,400,50);
 
-        integranteSidney = new JLabel("Sidney Oliveira");
-        integranteSidney.setBounds(150,120,400,50);
+        integranteNicolas = new JLabel("Nicolas Santos");
+        integranteNicolas.setBounds(150,120,400,50);
 
         integranteTabata = new JLabel("Tabata Fernanda");
         integranteTabata.setBounds(150,140,400,50);
@@ -45,20 +45,24 @@ public class Sobre extends JFrame implements ActionListener {
         ano.setBounds(140,225,400,50);
 
         voltar = new JButton("Voltar");
-        voltar.setBounds(100,300,200,50);
+        voltar.setBounds(40,300,150,50);
         voltar.setBackground(new Color(0xEFB62A));
+
+        devs = new JButton("Desenvolvedores");
+        devs.setBounds(210,300,150,50);
+        devs.setBackground(new Color(0x3A91EF));
 
         // Colocando os componentes na tela
         getContentPane().setLayout(null);
         getContentPane().add(titulo);
         getContentPane().add(integranteMiguel);
         getContentPane().add(integranteMarcos);
-        getContentPane().add(integranteSidney);
+        getContentPane().add(integranteNicolas);
         getContentPane().add(integranteTabata);
         getContentPane().add(sala);
         getContentPane().add(ano);
         getContentPane().add(voltar);
-
+        getContentPane().add(devs);
         // Dando acao para o botao
         voltar.addActionListener(this);
     }
@@ -69,6 +73,11 @@ public class Sobre extends JFrame implements ActionListener {
             Menu janelaMenu = new Menu();
             this.dispose();
             janelaMenu.setVisible(true);
+        }
+        if (e.getSource() == devs){
+            Dev dev = new Dev();
+            this.dispose();
+            dev.setVisible(true);
         }
     }
 }
