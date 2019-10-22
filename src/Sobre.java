@@ -65,6 +65,7 @@ public class Sobre extends JFrame implements ActionListener {
         getContentPane().add(devs);
         // Dando acao para o botao
         voltar.addActionListener(this);
+        devs.addActionListener(this);
     }
     @Override
     public void actionPerformed(ActionEvent e) {

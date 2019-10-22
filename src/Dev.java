@@ -18,35 +18,35 @@ public class Dev extends JFrame implements ActionListener {
         getContentPane().setBackground(new Color(178, 178,255));
 
         fotoMarcos = new JLabel("");
-        fotoMarcos.setBounds();
-        fotoMarcos.setIcon(new ImageIcon();
+        fotoMarcos.setBounds(210, 10, 110, 110);
+        fotoMarcos.setIcon(new ImageIcon("img/marcos.png"));
 
         fotoMiguel = new JLabel("");
-        fotoMiguel.setBounds();
-        fotoMiguel.setIcon(new ImageIcon();
+        fotoMiguel.setBounds(60, 10, 110, 110);
+        fotoMiguel.setIcon(new ImageIcon("img/miguel.png"));
 
         fotoNicolas = new JLabel("");
-        fotoNicolas.setBounds();
-        fotoNicolas.setIcon(new ImageIcon();
+        fotoNicolas.setBounds(60, 145, 110, 110);
+        fotoNicolas.setIcon(new ImageIcon("img/nicolas.png"));
 
         fotoTabata = new JLabel("");
-        fotoTabata.setBounds();
-        fotoTabata.setIcon(new ImageIcon();
+        fotoTabata.setBounds(210, 145, 110, 110);
+        fotoTabata.setIcon(new ImageIcon("img/tabata.png"));
 
         integranteMarcos = new JLabel("Marcos Fleuri");
-        integranteMarcos.setBounds();
+        integranteMarcos.setBounds(210, 105, 128, 50);
 
         integranteMiguel = new JLabel("Miguel Riquelme");
-        integranteMiguel.setBounds();
+        integranteMiguel.setBounds(60, 105, 128, 50);
 
-        integranteNicolas = new JLabel("Sidney Oliveira");
-        integranteNicolas.setBounds();
+        integranteNicolas = new JLabel("Nicolas Santos");
+        integranteNicolas.setBounds(60, 240, 128, 50);
 
         integranteTabata = new JLabel("Tabata Fernanda");
-        integranteTabata.setBounds();
+        integranteTabata.setBounds(210, 240, 128, 50);
 
         voltar = new JButton("Voltar");
-        voltar.setBounds();
+        voltar.setBounds(100, 300, 200, 50);
         voltar.setBackground(new Color(0xEFB62A));
 
         getContentPane().setLayout(null);
